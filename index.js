@@ -7,6 +7,7 @@ const PORT = process.env.PORT || 5000;
 const dbUrl = "mongodb+srv://gvardeez95:stalker95@products.yiuz2.mongodb.net/hbs_news_cump_db";
 
 app.use(express.json());
+app.use(require("./routes"));
 
 const start = async () => {
   try {
