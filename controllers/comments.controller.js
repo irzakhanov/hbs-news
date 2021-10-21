@@ -1,6 +1,6 @@
 const Comment = require("../models/Comment.model");
 
-module.exports.newsController = {
+module.exports.commentsController = {
   getAllComments: async (req, res) => {
     try {
       const comments = await Comment.find();

@@ -1,6 +1,6 @@
 const Category = require("../models/Category.model");
 
-module.exports.newsController = {
+module.exports.categoriesController = {
   getAllCategories: async (req, res) => {
     try {
       const categories = await Category.find();

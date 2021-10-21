@@ -3,8 +3,11 @@ const News = require("../models/News.model");
 module.exports.newsController = {
   getAllNews: async (req, res) => {
     try {
-      const news = await News.find();
-      return res.json(news);
+      const news = await News.find().lean();
+
+      return res.render("home", {
+        news,
+      });
     } catch (error) {
       console.log(error);
       res.json({ error: "Server error" });
